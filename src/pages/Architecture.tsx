@@ -1,8 +1,12 @@
+import Navbar from "../components/Navbar";
 
 export default function Architecture() {
   return (
     <>
-      <h1>Architecture</h1>
+      <section id="architecturePage">
+        <Navbar/>
+
+      </section>
     </>
   )
 }

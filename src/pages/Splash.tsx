@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Image from "../components/Image";
 
 
-export default function Logo() {
+export default function Splash() {
   return (
     <>
     <section id="splashPage">

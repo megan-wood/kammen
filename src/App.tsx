@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Routes, Route } from "react-router-dom"; 
-import Logo from "./pages/Logo";
+import Splash from "./pages/Splash";
 import Home from "./pages/Home";
 import Graphics from "./pages/Graphics";
 import Architecture from "./pages/Architecture";
@@ -18,7 +18,7 @@ function App() {
     <>
       {/* Define routes */}
       <Routes>
-        <Route path="/" element={<Logo/>}/>
+        <Route path="/" element={<Splash/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/graphics" element={<Graphics/>}/>
         <Route path="/architecture" element={<Architecture/>}/>

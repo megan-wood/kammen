@@ -29,7 +29,7 @@ export default function Home() {
       src: "Final_Snellen_RATS_hirez-art.png", 
       alt: "graphic for Year of the Rat 2020"
     }
-  ]
+  ];
 
 
   return (

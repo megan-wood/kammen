@@ -51,6 +51,12 @@ p {
   font-size: 14px;
 }
 
+.active-link, .active-link:hover {
+  color: #8f0000; 
+  /* font-weight: bold;
+  transition: 0.2s; */
+}
+
 /* -- Splash Page -- */
 #splashPage {
   display: flex; 
@@ -101,6 +107,11 @@ nav ul {
 
 nav a {
   padding: 0.7em;
+  color: black;
+}
+
+nav a:hover {
+  color: #c0c0c0;
 }
 
 /* -- Home Page -- */
@@ -131,4 +142,25 @@ nav a {
   margin-right: 15px;
   /* height: 90vh; */
   flex-shrink: 0;
+}
+
+/* -- Graphics Page -- */
+#graphicsPage {
+  padding-left: 1.5em;
+}
+
+
+/* -- Architecture Page -- */
+#architecturePage {
+  padding-left: 1.5em;
+}
+
+/* -- Photography Page -- */
+#photographyPage {
+  padding-left: 1.5em;
+}
+
+/* -- Contact Page -- */
+#contactPage {
+  padding-left: 1.5em;
 }

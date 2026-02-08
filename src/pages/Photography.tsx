@@ -1,8 +1,11 @@
+import Navbar from "../components/Navbar";
 
 export default function Photography() {
   return (
     <>
-      <h1>Photography</h1>
+      <section id="photographyPage">
+        <Navbar/>
+      </section>
     </>
   )
 }

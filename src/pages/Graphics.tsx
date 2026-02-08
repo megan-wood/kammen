@@ -1,8 +1,13 @@
+import Navbar from "../components/Navbar";
+
 
 export default function Graphics() {
   return (
     <>
-      <h1>Graphics</h1>
+      <section id="graphicsPage">
+        <Navbar/>
+
+      </section>
     </>
   )
 }
