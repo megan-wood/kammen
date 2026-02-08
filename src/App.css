@@ -95,13 +95,17 @@ nav img {
   /* width: calc(20px + 40.0px); */
 }
 
+#navbarLogo {
+  padding-left: 0;
+}
+
 nav ul {
   display: flex;
   list-style-type: none;
   margin-block-start: 0;
   margin-block-end: 0;
   padding: 0.7em;
-  font-size: 13px;
+  font-size: 12px;
   /* gap: 5px; */
 }
 

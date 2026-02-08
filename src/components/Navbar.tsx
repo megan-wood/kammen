@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        <NavLink to="/home" className={({ isActive }) => isActive ? "active-link" : ""}>
+        <NavLink to="/home" id="navbarLogo" className={({ isActive }) => isActive ? "active-link" : ""}>
           <Image src="Nav-LOGO-2025-70.png" alt="Jay Kammen logo"/>
         </NavLink>
         <ul>

@@ -10,7 +10,7 @@ export default function Home() {
       alt: "graphic for 100th anniversary of Santa Rosa Symphony with violin"
     },
     {
-      src: "RC_LONG53-web.jpg",
+      src: "RC_LONG5-web.jpg",
       alt: "graphic for risotto from Italian Harvest"
     },
     {
