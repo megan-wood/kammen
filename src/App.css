@@ -3,12 +3,12 @@
   /* width: 100%; */
   /* margin: 0 auto; */
   /* padding: 2rem; */
-  display: flex; 
-  /* align-items: center; */
-  /* text-align: center; */
+  /* display: flex;  */
+  /* flex-direction: column; */
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -47,10 +47,15 @@
   color: #888;
 }
 
+p {
+  font-size: 14px;
+}
 
-.gallery {
+/* -- Splash Page -- */
+#splashPage {
   display: flex; 
-  /* width: 50%; */
+  height: 100vh;
+  justify-content: center;  /* centers splash page */
 }
 
 #splashLogo {
@@ -63,4 +68,67 @@
 #splashLogo img {
   max-width: 400px;
   
+}
+
+/* -- Navbar -- */
+nav {
+  padding: 1.5em 2em 1.5em 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 14px;
+  flex-shrink: 0;  /* locks navbar height */
+}
+
+nav img {
+  /* width: 55.2px; */
+  height: 55.2px; 
+  /* height: calc(20px + 40.0px); */
+  /* width: calc(20px + 40.0px); */
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0.7em;
+  font-size: 13px;
+  /* gap: 5px; */
+}
+
+nav a {
+  padding: 0.7em;
+}
+
+/* -- Home Page -- */
+#homePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-left: 1.5em;
+}
+
+/* -- Gallery -- */
+/* .galleryWrapper {
+  flex: 1;
+  overflow: hidden;
+} */
+
+.gallery {
+  display: flex; 
+  overflow-x: auto;
+  /* gap: 10px; */
+  /* width: 50%; */
+  /* padding-left: 1.5em; */
+  /* height: 100vh; */
+  /* overflow: hidden; */
+}
+
+.gallery img {
+  margin-right: 15px;
+  /* height: 90vh; */
+  flex-shrink: 0;
 }

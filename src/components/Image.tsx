@@ -14,7 +14,8 @@ export default function Image( { src, alt = "" }: ImageProps) {
         alt={alt}
         style={{
           // width: "50%",
-          width: "100%",  // fix so each image takes up as much space as it needs, doesn't shrink it
+          // width: "100%",  // fix so each image takes up as much space as it needs, doesn't shrink it
+          width: "auto",
           // height: "100%",
           display: "block",
         }}
