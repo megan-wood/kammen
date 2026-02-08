@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* max-width: 1280px; */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  display: flex; 
+  /* align-items: center; */
+  /* text-align: center; */
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -45,4 +51,16 @@
 .gallery {
   display: flex; 
   /* width: 50%; */
+}
+
+#splashLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+}
+
+#splashLogo img {
+  max-width: 400px;
+  
 }
