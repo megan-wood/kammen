@@ -49,12 +49,17 @@
 
 p {
   font-size: 14px;
+  margin: 0;
 }
 
 .active-link, .active-link:hover {
   color: #8f0000; 
   /* font-weight: bold;
   transition: 0.2s; */
+}
+
+.divider {
+  height: 4.5em;
 }
 
 /* -- Splash Page -- */
@@ -151,20 +156,58 @@ nav a:hover {
 /* -- Graphics Page -- */
 #graphicsPage {
   padding-left: 1.5em;
+  height: 100vh;
+  display: flex; 
+  flex-direction: column;
 }
 
 
 /* -- Architecture Page -- */
 #architecturePage {
   padding-left: 1.5em;
+  display: flex; 
+  flex-direction: column;
+  height: 100vh;
 }
 
 /* -- Photography Page -- */
 #photographyPage {
   padding-left: 1.5em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* -- Contact Page -- */
 #contactPage {
+  /* padding-left: 1.5em; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#contactPage nav {
   padding-left: 1.5em;
+}
+
+#contactPage img {
+  flex-shrink: 0;
+}
+
+#description {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px 10px 20px;
+}
+
+#description p {
+  margin: 0 0 1em 0; 
+  word-wrap: break-word;
+  width: 1064px;
+  font-weight: 400;
+  color: #000000;
+}
+
+#noPadding {
+  padding: 0;
 }
