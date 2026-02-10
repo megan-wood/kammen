@@ -48,7 +48,7 @@
 }
 
 p {
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
 }
 
@@ -58,9 +58,20 @@ p {
   transition: 0.2s; */
 }
 
-.divider {
+/* .divider {
   height: 4.5em;
-}
+  width: 100%; 
+  background: rgba(255, 0, 0, 0.1); 
+  display: flex; 
+  flex-shrink: 0;
+} */
+
+/* .divider::after {
+  content: "";
+  width: 100%;
+  height: 4.5em;
+  background-color: #c3c3c3;
+} */
 
 /* -- Splash Page -- */
 #splashPage {
@@ -190,9 +201,9 @@ nav a:hover {
   padding-left: 1.5em;
 }
 
-#contactPage img {
+/* #contactPage img {
   flex-shrink: 0;
-}
+} */
 
 #description {
   text-align: center;
@@ -205,9 +216,74 @@ nav a:hover {
   word-wrap: break-word;
   width: 1064px;
   font-weight: 400;
-  color: #000000;
+  line-height: 1.4 !important;
+  /* color: #000000; */
+
 }
 
-#noPadding {
-  padding: 0;
+#description #noPadding {
+  margin: 0;
+}
+
+/* #contactWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+} */
+
+#contactInfo {
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1064px;
+  padding: 10px 20px 10px 20px;
+  /* width: 33.333% */
+}
+
+/* #contactInfo a {
+  color: #810000;
+} */
+
+#contactInfo a:hover {
+  color: #dadada;
+  text-decoration: underline;
+}
+
+#contactInfo p {
+  margin: 0 0 1em 0; 
+}
+
+.contactColumn {
+  flex: 1;  /* each column takes equal width */
+  text-align: center; 
+  font-weight: normal;
+  width: 33.333%
+}
+
+.contactColumn h2 {
+  font-size: 18px;
+  margin: 0 0 0.4em;
+  color: #c3c3c3;
+}
+
+#footerText {
+  padding: 20px 24px;
+}
+
+.dividerWrapper {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.divider {
+  /* height: 4.5em; */
+  width: 100%; 
+  /* background: rgba(255, 0, 0, 0.1);  */
+  /* display: flex;  */
+  /* flex-shrink: 0; */
+  padding: 18px;
+  box-sizing: border-box;
 }
