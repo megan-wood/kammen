@@ -1,22 +1,29 @@
 import Navbar from "../components/Navbar";
 import Image from "../components/Image";
-
+import { useInView } from "../useInView";
+;
 
 export default function Contact() {
+  const { ref, isInView } = useInView<HTMLDivElement>({
+    threshold: 0.2,
+  });
+
   return (
     <>
       <section id="contactPage">
         <Navbar/>
-        <Image src="DSC_7856_bw-1-sharp-web.jpg"/>
+        <div id="contactImage" className="fadeIn">
+          <Image src="DSC_7856_bw-1-sharp-web.jpg"/>
+        </div>
         <div className="dividerWrapper">
           <div className="divider"><p><br/></p></div>
         </div>
-        <div id="description">
+        <div id="description" className="fadeIn">
           <p>Jay Kammen is a graphic designer, photographer, and recovering architect. He is often found frolicking amongst the many shades between light/dark, nature/culture, head/heart, western/eastern, music/silence, human/animal, digital/analog, words/gestures, desert/dessert...</p>
           <p id="noPadding"><br></br></p>
         </div>
         {/* <section id="contactWrapper">  centers on the page */}
-          <div id="contactInfo">
+          <div id="contactInfo" ref={ref} className={`contactSection ${isInView ? "visible" : ""}`}>
             <div className="contactColumn">
               <h2><span>VIRTUAL</span></h2>
               <p><br></br></p>
@@ -25,10 +32,16 @@ export default function Contact() {
             </div>
             <div className="contactColumn">
               <h2><span>ACTUAL</span></h2>
-              <p></p>
+              <p><br></br></p>
+              <p>Jay Kammen</p>
+              <p>255 Steiner #504</p>
+              <p>San Francisco, CA</p>
+              <p>94117 USA</p>
             </div>
             <div className="contactColumn">
               <h2><span>MOBILE</span></h2>
+              <p><br/></p>
+              <p>415-252-0200</p>
             </div>
           </div>
 
