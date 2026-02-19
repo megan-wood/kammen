@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "./Image.tsx";
 
 interface GalleryImage {
@@ -13,6 +13,11 @@ interface GalleryProps {
 
 export default function Gallery({ images }: GalleryProps) {
   const galleryRef = useRef<HTMLDivElement>(null); 
+  const [loaded, setLoaded] = useState(false); 
+
+  useEffect(() => {
+    setLoaded(true); 
+  })
 
   useEffect(() => {
     const gallery = galleryRef.current;
@@ -34,7 +39,7 @@ export default function Gallery({ images }: GalleryProps) {
   
   return (
     <>
-      <div className="gallery" ref={galleryRef}>
+      <div className={`gallery ${loaded ? "slideIn" : ""}`} ref={galleryRef}>
         {images.map((img, index) => (
           <Image 
             key={index}
