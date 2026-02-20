@@ -1,19 +1,21 @@
 import Navbar from "../components/Navbar";
 import Image from "../components/Image";
 import { useInView } from "../useInView";
+import { useState } from "react"
 
 
 export default function Contact() {
   const { ref, isInView } = useInView<HTMLDivElement>({
     threshold: 0.4,
   });
+  const [ imageLoaded, setImageLoaded ] = useState(false); 
 
   return (
     <>
       <section id="contactPage">
         <Navbar/>
         <div id="contactImage" className="fadeIn">
-          <Image src="DSC_7856_bw-1-sharp-web.jpg"/>
+          <Image src="DSC_7856_bw-1-sharp-web.jpg" onLoad={() => setImageLoaded(true)}/> 
         </div>
         <div className="dividerWrapper">
           <div className="divider"><p><br/></p></div>
@@ -23,7 +25,8 @@ export default function Contact() {
           <p id="noPadding"><br></br></p>
         </div>
         {/* <section id="contactWrapper">  centers on the page */}
-          <div id="contactInfo" ref={ref} className={`contactSection ${isInView ? "visible" : ""}`}>
+          {/* <div id="contactInfo" ref={ref} className={`contactSection ${isInView ? "visible" : ""}`}> */}
+          <div id="contactInfo" ref={ref} className={`contactSection ${ isInView && imageLoaded ? "visible" : ""}`}>
             <div className="contactColumn">
               <h2><span>VIRTUAL</span></h2>
               <p><br></br></p>

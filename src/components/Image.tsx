@@ -3,9 +3,10 @@
 interface ImageProps {
   src: string;
   alt?: string;
+  onLoad?: () => void;
 }
 
-export default function Image( { src, alt = "" }: ImageProps) {
+export default function Image( { src, alt = "", onLoad }: ImageProps) {
 
   return (
     <>
@@ -19,6 +20,7 @@ export default function Image( { src, alt = "" }: ImageProps) {
           // height: "100%",
           display: "block",
         }}
+        onLoad={onLoad}
       />
     </>
   )
