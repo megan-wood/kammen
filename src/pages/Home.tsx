@@ -1,6 +1,6 @@
 
 import Navbar from "../components/Navbar";
-import Image from "../components/Image";
+// import Image from "../components/Image";
 import Gallery from "../components/Gallery";
 
 export default function Home() {

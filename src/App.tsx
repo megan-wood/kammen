@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Routes, Route } from "react-router-dom"; 
 import Splash from "./pages/Splash";
 import Home from "./pages/Home";
@@ -6,13 +6,13 @@ import Graphics from "./pages/Graphics";
 import Architecture from "./pages/Architecture";
 import Photography from "./pages/Photography";
 import Contact from "./pages/Contact";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Image from "./components/Image";
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import Image from "./components/Image";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
