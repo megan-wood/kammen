@@ -5,7 +5,7 @@ import { useInView } from "../useInView";
 
 export default function Contact() {
   const { ref, isInView } = useInView<HTMLDivElement>({
-    threshold: 0.2,
+    threshold: 0.4,
   });
 
   return (
