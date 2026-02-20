@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Image from "../components/Image";
 import { useInView } from "../useInView";
-;
+
 
 export default function Contact() {
   const { ref, isInView } = useInView<HTMLDivElement>({
