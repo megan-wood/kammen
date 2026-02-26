@@ -1,8 +1,19 @@
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom"; 
+import { useEffect } from "react";
 import Image from "../components/Image";
 
 
 export default function Splash() {
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/home");
+    }, 1000);  // 1 second
+
+    return () => clearTimeout(timer); 
+  }, [navigate]);
+  
   return (
     <>
     <section id="splashPage">
