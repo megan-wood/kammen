@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 
 interface ImageProps {
   src: string;
@@ -7,6 +7,12 @@ interface ImageProps {
 }
 
 export default function Image( { src, alt = "", onLoad }: ImageProps) {
+  const [loaded, setLoaded] = useState(false); 
+
+  const handleLoad = () => {
+    setLoaded(true); 
+    onLoad?.(); 
+  }
 
   return (
     <>
@@ -20,7 +26,7 @@ export default function Image( { src, alt = "", onLoad }: ImageProps) {
           // height: "100%",
           display: "block",
         }}
-        onLoad={onLoad}
+        onLoad={handleLoad}
       />
     </>
   )

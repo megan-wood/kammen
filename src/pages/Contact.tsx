@@ -15,7 +15,8 @@ export default function Contact() {
       <section id="contactPage">
         <Navbar/>
         <div id="contactImage" className="fadeIn">
-          <Image src="DSC_7856_bw-1-sharp-web.jpg" onLoad={() => setImageLoaded(true)}/> 
+          {/* <Image src="DSC_7856_bw-1-sharp-web.jpg" onLoad={() => setImageLoaded(true)}/>  */}
+          <Image src="DSC_7856_bw-1-sharp-web.jpg"/> 
         </div>
         <div className="dividerWrapper">
           <div className="divider"><p><br/></p></div>
@@ -26,7 +27,8 @@ export default function Contact() {
         </div>
         {/* <section id="contactWrapper">  centers on the page */}
           {/* <div id="contactInfo" ref={ref} className={`contactSection ${isInView ? "visible" : ""}`}> */}
-          <div id="contactInfo" ref={ref} className={`contactSection ${ isInView && imageLoaded ? "visible" : ""}`}>
+          {/* <div id="contactInfo" ref={ref} className={`contactSection ${ isInView && imageLoaded ? "visible" : ""}`}> */}
+          <div id="contactInfo" ref={ref} className={`contactSection ${ isInView ? "visible" : ""}`}>
             <div className="contactColumn">
               <h2><span>VIRTUAL</span></h2>
               <p><br></br></p>
