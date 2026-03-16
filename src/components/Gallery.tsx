@@ -26,6 +26,28 @@ export default function Gallery({ images }: GalleryProps) {
 
   useEffect(() => {
     const gallery = galleryRef.current;
+    if (!gallery) return;
+
+    let animationFrame: number; 
+    const speed = 0.5;
+
+    const scroll = () => {
+      gallery.scrollLeft += speed;
+
+      if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+        gallery.scrollLeft = 0;
+      }
+
+      animationFrame = requestAnimationFrame(scroll);
+    };
+
+    animationFrame = requestAnimationFrame(scroll); 
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  useEffect(() => {
+    const gallery = galleryRef.current;
     if (!gallery) return; 
 
     const onWheel = (e: WheelEvent) => {
@@ -45,7 +67,8 @@ export default function Gallery({ images }: GalleryProps) {
   return (
     <>
       <div className={`gallery ${loadedCount >= 4 ? "slideIn" : ""}`} ref={galleryRef}>
-        {images.map((img, index) => (
+        {/* {images.map((img, index) => ( */}
+        {[...images, ...images].map((img, index) => (  // duplicates gallery
           <Image 
             key={index}
             src={img.src}
