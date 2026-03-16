@@ -1,14 +1,14 @@
 import Navbar from "../components/Navbar";
 import Image from "../components/Image";
 import { useInView } from "../useInView";
-import { useState } from "react"
+// import { useState } from "react"
 
 
 export default function Contact() {
   const { ref, isInView } = useInView<HTMLDivElement>({
     threshold: 0.4,
   });
-  const [ imageLoaded, setImageLoaded ] = useState(false); 
+  // const [ imageLoaded, setImageLoaded ] = useState(false); 
 
   return (
     <>
