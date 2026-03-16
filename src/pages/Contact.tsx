@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Image from "../components/Image";
 import { useInView } from "../useInView";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Contact() {
@@ -9,6 +9,14 @@ export default function Contact() {
     threshold: 0.7,
   });
   const [ imageLoaded, setImageLoaded ] = useState(false); 
+  const [ hasScrolled, setHasScrolled ] = useState(false);
+
+  // Detect first scroll
+  useEffect(() => {
+    const handleScroll = () => setHasScrolled(true); 
+    window.addEventListener("scroll", handleScroll, { once: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);   
 
   return (
     <>
@@ -28,7 +36,7 @@ export default function Contact() {
         {/* <section id="contactWrapper">  centers on the page */}
           {/* <div id="contactInfo" ref={ref} className={`contactSection ${isInView ? "visible" : ""}`}> */}
           {/* <div id="contactInfo" ref={ref} className={`contactSection ${ isInView && imageLoaded ? "visible" : ""}`}> */}
-          <div id="contactInfo" ref={ref} className={`contactSection ${isInView && imageLoaded ? "visible" : ""}`}>
+          <div id="contactInfo" ref={ref} className={`contactSection ${isInView && imageLoaded && hasScrolled ? "visible" : ""}`}>
             <div className="contactColumn">
               <h2><span>VIRTUAL</span></h2>
               <p><br></br></p>
