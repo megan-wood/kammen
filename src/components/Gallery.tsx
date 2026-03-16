@@ -44,7 +44,7 @@ export default function Gallery({ images }: GalleryProps) {
   
   return (
     <>
-      <div className={`gallery ${loadedCount >= 3 ? "slideIn" : ""}`} ref={galleryRef}>
+      <div className={`gallery ${loadedCount >= 4 ? "slideIn" : ""}`} ref={galleryRef}>
         {images.map((img, index) => (
           <Image 
             key={index}
