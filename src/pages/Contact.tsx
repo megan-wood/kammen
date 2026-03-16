@@ -6,7 +6,7 @@ import { useInView } from "../useInView";
 
 export default function Contact() {
   const { ref, isInView } = useInView<HTMLDivElement>({
-    threshold: 0.4,
+    threshold: 0.7,
   });
   // const [ imageLoaded, setImageLoaded ] = useState(false); 
 
