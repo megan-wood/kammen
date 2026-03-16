@@ -169,6 +169,10 @@ nav a:hover {
   /* transform: translateX(0);  */
 }
 
+.gallery::-webkit-scrollbar {
+  display: none; 
+}
+
 .gallery img {
   margin-right: 15px;
   /* height: 90vh; */
