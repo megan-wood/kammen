@@ -13,11 +13,16 @@ interface GalleryProps {
 
 export default function Gallery({ images }: GalleryProps) {
   const galleryRef = useRef<HTMLDivElement>(null); 
-  const [loaded, setLoaded] = useState(false); 
+  // const [loaded, setLoaded] = useState(false); 
+  const [loadedCount, setLoadedCount] = useState(0); 
 
-  useEffect(() => {
-    setLoaded(true); 
-  })
+  const handleImageLoad = () => {
+    setLoadedCount((count) => count + 1);
+  }
+
+  // useEffect(() => {
+  //   setLoaded(true); 
+  // })
 
   useEffect(() => {
     const gallery = galleryRef.current;
@@ -39,12 +44,13 @@ export default function Gallery({ images }: GalleryProps) {
   
   return (
     <>
-      <div className={`gallery ${loaded ? "slideIn" : ""}`} ref={galleryRef}>
+      <div className={`gallery ${loadedCount >= 3 ? "slideIn" : ""}`} ref={galleryRef}>
         {images.map((img, index) => (
           <Image 
             key={index}
             src={img.src}
             alt={img.alt}
+            onLoad={handleImageLoad}
             {...(img.caption ? { caption: img.caption } : {})}
           />
         ))}

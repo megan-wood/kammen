@@ -7,12 +7,12 @@ interface ImageProps {
 }
 
 export default function Image( { src, alt = "", onLoad }: ImageProps) {
-  const [loaded, setLoaded] = useState(false); 
+  // const [loaded, setLoaded] = useState(false); 
 
-  const handleLoad = () => {
-    setLoaded(true); 
-    onLoad?.(); 
-  }
+  // const handleLoad = () => {
+  //   setLoaded(true); 
+  //   onLoad?.(); 
+  // }
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Image( { src, alt = "", onLoad }: ImageProps) {
           // height: "100%",
           display: "block",
         }}
-        onLoad={handleLoad}
+        onLoad={onLoad}
       />
     </>
   )
