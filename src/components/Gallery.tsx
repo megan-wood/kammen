@@ -29,7 +29,7 @@ export default function Gallery({ images }: GalleryProps) {
     if (!gallery) return;
 
     let animationFrame: number; 
-    const speed = 0.5;
+    const speed = 1;
 
     const scroll = () => {
       gallery.scrollLeft += speed;
